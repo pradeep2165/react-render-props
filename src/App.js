@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <ClickCounter />
       <HowerCounter />
-      <User name={(isLoggedIn) => (isLoggedIn ? "Pradeep" : "Guest")} />
+      <User render={(isLoggedIn) => (isLoggedIn ? "Pradeep" : "Guest")} />
     </div>
   );
 }
