@@ -1,22 +1,11 @@
 import React, { Component } from "react";
 
 class ClickCounter extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      count: 0,
-    };
-  }
-  handelClickCount = () => {
-    this.setState((prevState) => {
-      return { count: prevState.count + 1 };
-    });
-  };
   render() {
+    const { count, handelClickCount } = this.props;
     return (
       <div>
-        <button onClick={this.handelClickCount}>Click {this.state.count} time</button>
+        <button onClick={handelClickCount}>Click {count} time</button>
       </div>
     );
   }

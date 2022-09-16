@@ -1,22 +1,11 @@
 import React, { Component } from "react";
 
 class HowerCounter extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      count: 0,
-    };
-  }
-  handelClickCount = () => {
-    this.setState((prevState) => {
-      return { count: prevState.count + 1 };
-    });
-  };
   render() {
+    const { count, handelClickCount } = this.props;
     return (
       <div>
-        <button onMouseOver={this.handelClickCount}>Howered {this.state.count}</button>
+        <button onMouseOver={handelClickCount}>Howered {count}</button>
       </div>
     );
   }
