@@ -11,8 +11,8 @@ function App() {
       {/* <ClickCounter />
       <HowerCounter />
       <User render={(isLoggedIn) => (isLoggedIn ? "Pradeep" : "Guest")} /> */}
-      <Counter render={(count, handelClickCount) => <ClickCounter count={count} handelClickCount={handelClickCount} />} />
-      <Counter render={(count, handelClickCount) => <HowerCounter count={count} handelClickCount={handelClickCount} />} />
+      <Counter>{(count, handelClickCount) => <ClickCounter count={count} handelClickCount={handelClickCount} />}</Counter>
+      <Counter>{(count, handelClickCount) => <HowerCounter count={count} handelClickCount={handelClickCount} />}</Counter>
     </div>
   );
 }
